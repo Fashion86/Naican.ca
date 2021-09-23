@@ -1,0 +1,71 @@
+{
+  "name": "naican",
+  "homepage": "https://naican.ca",
+  "version": "1.0.0",
+  "main": "server.js",
+  "private": true,
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.4.1",
+    "@stripe/stripe-js": "^1.17.1",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "cloudinary": "^1.23.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.3",
+    "nodemailer": "^6.6.3",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^1.1.5",
+    "react-scroll": "^1.8.2",
+    "react-styled-carousel": "^0.5.1",
+    "styled-components": "^4.4.1",
+    "svg": "^0.1.0",
+    "validator": "^13.6.0",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "client": "cd frontend/ && npm start --perfix frontend",
+    "start": "concurrently \"npm run dev\" \"npm run client\"",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server",
+    "seeder": "node backend/utils/seeder.js ",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "author": "Nibso Services",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
